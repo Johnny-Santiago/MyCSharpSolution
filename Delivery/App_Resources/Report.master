@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Report.master.cs" Inherits="FGWarehouse.App_Resources.Report" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title>Exact - PT. ICHIKOH INDONESIA</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="description" content="Description of your web page goes here." />
+    <link rel="Shortcut Icon" href='<%# ResolveUrl ("~/App_Resources/images/animated_favicon1.gif") %>' />
+    <meta name="keywords" content="Keywords for you web page go here. Each keyword or group of keyword phrases are separated by a comma. Keep this keyword list short and relevant to the content of this specific page and also relevant to the tile of the specific page" />
+    <script type='text/javascript' src='<%# ResolveUrl ("~/App_Resources/client-scripts/framework/jquery-1.5.1.min.js") %>'></script>
+    <script type='text/javascript' src='<%# ResolveUrl ("~/App_Resources/client-scripts/app/left-menu.js") %>'></script>
+    <asp:ContentPlaceHolder ID="HeadContentPlaceHolder" runat="server" >
+    </asp:ContentPlaceHolder>
+</head>
+<body style="min-width: 1280px;">
+    <form id="Form1" runat="server">
+    <div class="FullWidth HeaderTop HeaderGrad2 clearfix">
+        <div class="container_32 clearfix Header">
+            <%--<div class="grid_15 inline alpha" >--%>
+                <a id="A1" href="" class="branding2 grid_7 alpha" runat="server"></a>
+                <div class="grid_8 inline omega" style="margin-top: -15px" >
+                    <asp:ContentPlaceHolder ID="DepartmentPlaceHolder" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div class="grid_6 inline omega"style="margin-top: -15px" >
+                    <asp:ContentPlaceHolder ID="DatePlaceHolder" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            <%--</div>--%>
+            <div class="grid_11 UtilityMenu omega">
+                <div class="info-area">
+                    <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                        <LoggedInTemplate>
+                            Welcome <span class="bold">
+                                <asp:LoginName ID="HeadLoginName" runat="server" />
+                            </span>! |
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                    <asp:LoginStatus ID="HeadLoginStatus" runat="server" Enabled="true" 
+                        LogoutAction="Redirect" LogoutText="Logout"
+                        LogoutPageUrl="../Account/Logout.aspx" />
+                </div>
+                <div class="search-box" >
+                    <asp:ContentPlaceHolder ID="SearchContentPlaceHolder" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <%--<br class="clear" />
+            
+            <div class="grid_6 inline omega" >
+                <asp:ContentPlaceHolder ID="DatePlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>--%>
+        </div>
+    </div>
+    <div class="FullWidth ContentMain">
+        <div class="container_32 clearfix ContentArea">
+            <div class="grid_32 omega"> 
+                <%--<div class="temp breadCrumb clearfix">
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server" CssClass="bc-container">
+                        <RootNodeStyle CssClass="first" />
+                        <NodeStyle />
+                        <CurrentNodeStyle CssClass="last" />
+                        <PathSeparatorStyle CssClass="bc-seperator" />
+                        <PathSeparatorTemplate>
+                        </PathSeparatorTemplate>
+                    </asp:SiteMapPath>
+                </div>--%>
+                <asp:Literal runat="server" ID="ltlMessage" EnableViewState="false"></asp:Literal>
+                <div style="min-height: 450px; clear:both;">
+                    <asp:ContentPlaceHolder ID="BodyContentPlaceholder" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="FullWidth FooterMain ThemeGrad">
+        <div class="container_32 clearfix">
+            <div class="grid_32 clearfix company-info alpha suffix_1">
+                <a id="A2" href="" class="branding-x2 grid_3 alpha" runat="server"></a>
+                <p>
+                    Copyright &copy; <%= System.DateTime.Now.Year %> PT. ICHIKOH INDONESIA<br />
+                    Management Information Systems<br />
+                    Product Release: <%= System.Reflection.Assembly.GetAssembly(typeof(App_Resources_default)).GetName().Version.ToString()%><br />
+                    For comments/remarks/suggestions please contact MIS at local ###.
+                </p>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
+
