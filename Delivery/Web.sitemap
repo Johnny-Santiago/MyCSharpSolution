@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="Default.aspx" title="Home" description ="Home">
+    <siteMapNode url="~/Account/Default.aspx" title="My Account" description="My Account">
+      <siteMapNode url="~/Account/ChangePassword.aspx" title="Change Password" description="Change Password"/>
+    </siteMapNode>
+    
+    <siteMapNode url="About.aspx" title="About Delivery" description="About Delivery"/>
+    <siteMapNode url="SalesOrders.aspx" title="Delivery Order and Manifest" description="Delivery Order and Manifest"/>
+    <siteMapNode url="DeliveryReport.aspx" title="Delivery Order Report" description="Delivery Order Report"/>
+    <siteMapNode url="~/DNTransmittals/DNTransmittalInquiry.aspx" title="Delivery Note Transmittals" description="Delivery Note Transmittals"/>
+    <siteMapNode url="DeliveryReturn.aspx" title="Delivery Return Report" description="Delivery Return Report"/>
+    <siteMapNode url="STNReport.aspx" title="STN Report" description="STN Report"/>
+    <siteMapNode url="ASNReport.aspx" title="ASN Report" description="ASN Report"/>
+    <siteMapNode url="DNMapped.aspx" title="DN Mapped" description="DN Mapped"/>
+    <siteMapNode url="DNNotMapped.aspx" title="DN Not Mapped" description="DN Not Mapped"/>
+
+  </siteMapNode>
+</siteMap>
