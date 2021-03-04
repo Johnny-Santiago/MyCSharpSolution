@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="Default.aspx" title="Home" description ="Home">
+    <siteMapNode url="~/Account/Default.aspx" title="My Account" description="My Account">
+      <siteMapNode url="~/Account/ChangePassword.aspx" title="Change Password" description="Change Password"/>
+    </siteMapNode>
+    
+    <siteMapNode url="About.aspx" title="About EDI" description="About EDI"/>
+
+    <siteMapNode url="~/SalesOrders/Default.aspx" title="Import Sales Orders" description="Import Sales Orders">
+      <siteMapNode url="~/SalesOrders/SOImportStandard.aspx" title="Standard - All Other Customers" description="Standard - All Other Customers" />      
+      <!--<siteMapNode url="~/SalesOrders/ADMDefault.aspx" title="ADM" description="ADM" >-->
+        <siteMapNode url="~/SalesOrders/SOImportADM.aspx" title="ADM OEM" description="ADM OEM" />
+        <siteMapNode url="~/SalesOrders/SOImportOESADM.aspx" title="ADM OES" description="ADM OES" />
+      <!--</siteMapNode>-->      
+      <siteMapNode url="~/SalesOrders/SOImportHPM.aspx" title="HPM" description="HPM" />
+      <siteMapNode url="~/SalesOrders/SOImportTAM.aspx" title="TAM" description="TAM" />
+      <siteMapNode url="~/SalesOrders/SOImportTMMIN.aspx" title="TMMIN" description="TMMIN" />
+      <siteMapNode url="~/SalesOrders/SOKanbanInquiry.aspx" title="Kanban to Sales Orders Inquiry" description="Kanban to Sales Orders Inquiry" />
+    </siteMapNode>
+    <!--<siteMapNode url="~/SalesOrders/QCReturnDefault.aspx" title="QC - Customer Return" description="QC - Customer Return" >
+      <siteMapNode url="~/SalesOrders/SOImportStandard_QCReturn.aspx" title="Standard - QC Customer Return" description="Standard - QC" />
+    </siteMapNode>-->
+
+    <siteMapNode url="~/Forecast/Default.aspx" title="Forecast Orders" description="Forecast Orders" >
+      <siteMapNode url="~/Forecast/ForecastExport.aspx" title="Download Forecast Template" description="Download Forecast Template" />
+      <siteMapNode url="~/Forecast/ForecastImport.aspx" title="Import Forecast Orders" description="Import Forecast Orders" />
+    </siteMapNode>
+
+    <siteMapNode url="~/ForecastOrder/Default.aspx" title="Forecast Orders Reports" description="Forecast Orders Reports" >
+      <siteMapNode url="~/ForecastOrder/ForecastOrderReport.aspx" title="Summary Order (Summary Forecast Order)" description="Forecast Orders Reports" />     
+    </siteMapNode>
+    
+  </siteMapNode>
+</siteMap>
+
